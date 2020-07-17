@@ -10,7 +10,6 @@ const cors = require("cors");
 const authRoute = require("./Routers/auth");
 const userRoute = require("./Routers/user");
 const postRoute = require("./Routers/posts");
-const hobbyRoute = require("./Routers/hobby");
 
 var distDir = __dirname + "/dist/blog-auth";
 app.use(express.static(distDir));
@@ -35,7 +34,6 @@ app.use(cors());
 app.use("/api",authRoute);
 app.use("/api",userRoute);
 app.use("/api",postRoute);
-app.use("/api",hobbyRoute);
 
 // RUN THE SERVER
 app.listen(port,(req,res)=>{
